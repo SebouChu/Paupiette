@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @repa.titre %>
+</p>
+
+<p>
+  <strong>Descritpion:</strong>
+  <%= @repa.descritpion %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @repa.date %>
+</p>
+
+<%= link_to 'Edit', edit_repa_path(@repa) %> |
+<%= link_to 'Back', repas_path %>
