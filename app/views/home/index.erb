@@ -12,8 +12,6 @@
         <% if !user_signed_in? %>
               <%= link_to "Je suis chef de cuisine !", new_user_registration_path(:episode => true),  class: "action-btn-home" %>
               <%= link_to "Je suis étudiant !", new_user_registration_path(:episode => false), class: "action-btn-home" %>
-        <% else %>
-              <%= link_to "Se connecter", new_user_session_path %>
         <% end %>
       </div>
     </div>

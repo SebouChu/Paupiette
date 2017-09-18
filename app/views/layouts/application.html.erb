@@ -27,22 +27,15 @@
           <li class="menu-li"><a href="<%= repas_path %>">Annonces</a></li>
           <li class="menu-li"><a href="">Contact</a></li>
           <% if user_signed_in? %>
-            <% if current_user.role == true %>
-              <li class="btn-paupiette"><%= link_to 'Nouveau repas', new_repas_path %></li>
-            <%end%>
+            <li class="btn-paupiette"><%= link_to 'Nouveau repas', new_repa_path %></li>
           <%end%>
         </ul>
         <ul class="onglet-right">
           <% if user_signed_in? %>
-          <li id="deroul" class="menu-li deroul closed"><%= current_user.first_name %> <span class="glyphicon glyphicon-user" aria-hidden="true"></span></li>
+          <li id="deroul" class="menu-li deroul closed"><%= current_user.email %> <span class="glyphicon glyphicon-user" aria-hidden="true"></span></li>
           <ul id="deroul-menu" class="deroul-menu closed">
-            <li><%= link_to 'Mon compte', user_path(current_user) %></li>
-            <% if current_user.role == false %>
-            <li><%= link_to 'Mon tableau de bord', dashboard_path %></li>
-            <!-- <%else%>
-            <li><%= link_to 'Mon tableau de bord', me_meals_path %></li> -->
-            <%end%>
-            <li><%= link_to "Me déconnecter", signout_path %></li>
+            <li><%= link_to 'Mon compte', edit_user_registration_path(current_user) %></li>
+            <li><%= link_to "Me déconnecter", destroy_user_session_path, method: :delete %></li>
           </ul>
       <% else %>
           <li class="btn-paupiette"><%= link_to 'Je me connecte', new_user_session_path%></li>
