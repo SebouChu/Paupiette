@@ -1,1 +1,21 @@
-Hello
+<section class="header-home">
+  <div class="paupiette-container">
+    <div class="inner-container-left">
+      <div class="baseline">
+        <div class="baseline-firstline">
+          Ce <strong>midi</strong>,
+        </div>
+        <div class="baseline-secondline">
+          c'est chez <strong>Mamie</strong> !
+        </div>
+        <h2>Paupiette réunit séniors et étudiants le temps d’un déjeuner, autour d’un bon petit plat ! <br>Toi aussi, rejoins-nous.</H2>
+        <% if !user_signed_in? %>
+              <%= link_to "Je suis chef de cuisine !", new_user_registration_path(:episode => true),  class: "action-btn-home" %>
+              <%= link_to "Je suis étudiant !", new_user_registration_path(:episode => false), class: "action-btn-home" %>
+        <% else %>
+              <%= link_to "Se connecter", new_user_session_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,16 +1,900 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-@import 'colors.css';
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@font-face {
+  font-family: 'playlistscript';
+  src: url('playlist_script-webfont.woff2') format('woff2'),
+  url('playlist_script-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'please_write_me_a_songmedium';
+    src: url('font-bof-webfont.woff2') format('woff2'),
+         url('font-bof-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+
+  background-color: rgba(91, 22, 51, 0.01);
+
+  // VARIABLES
+  //FONTS
+  $font1: 'Lato', sans-serif;
+  $font2: 'playlistscript';
+  $light: 300;
+  $regular: 400;
+  $bold: 700;
+
+  // COLORS
+  $white: #FFFEFE;
+  $greyback: #c4c4c4;
+  $greyfont: rgba(0, 0, 0, 0.5);
+  $pinkwhite: #f7f7f7;
+  $black: #494848;
+  $couleur1: #5B1633;
+  $couleur1hover: #4F112D;
+  //
+  input[type="submit"] {
+      padding: 8px 10px 8px 10px;
+      margin: 0px;
+      color: white;
+      background-color: #5B1633;
+      transition: all .2s ease;
+      border: 0px;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+    margin: 0px 10px;
+}
+
+.piliers {
+    margin-bottom: 15px;
+    font-size: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.pilier {
+    padding: 10% 20% 10% 20%;
+    background-color: #bfb0ca;
+}
+
+.image-pilier img {
+    width: 100%;
+}
+
+.texte-pilier h2 {
+    text-align: center;
+    font-family: "playlistscript";
+    font-size: 40px;
+}
+
+.texte-pilier p {
+    font-size: 21px;
+    text-align: center;
+}
+
+.prix .paupiette-container .inner-container {
+    background-color: rgba(84, 173, 118, 0.41);
+    margin: 0.5%;
+    padding: 50px 25px;
+}
+
+.prix-img {
+    text-align: center;
+}
+
+.prix-img img {
+    max-width: 100%;
+}
+
+.col2 {
+    font-family: 'please_write_me_a_songmedium';
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+table img {
+    width: 220px;
+}
+
+.infog table {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.infog h2 {
+    font-family: "playlistscript";
+    font-size: 60px;
+    text-align: center;
+}
+
+.infog h3 {
+    font-family: "playlistscript";
+    text-align: right;
+    font-size: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.col1.fleche img {
+    float: right;
+    margin-right: 30px;
+}
+
+section.infog {
+    margin-bottom: 50px;
+}
+
+.fleche img {
+    width: 100px;
+    padding-top: 50%;
+}
+
+section.prix {
+    margin-bottom: 50px;
+}
+
+.prix h2 {
+    text-align: center;
+    font-family: "playlistscript";
+    font-size: 50px;
+}
+
+.texte-pilier {
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.pilier-container {
+    width: 33.333%;
+    padding: 5px;
+}
+
+.infog .paupiette-container .inner-container {
+    background-color: #303030;
+    margin: 0.5%;
+    padding: 50px 25px;
+    color: white;
+}
+
+.paupiette-demi {
+    display: inline-block;
+    width: 50%;
+    vertical-align: text-top;
+    font-size: 17px;
+}
+
+.after-demi {
+    font-size: 17px;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.paupiette-second {
+    padding-left: 25px;
+}
+
+.paupiette-first {
+    padding-right: 25px;
+    border-right: 1px solid #5b1633;
+}
+.padding-page-demi {
+    padding-top: 70px;
+    font-size: 0px
+}
+
+
+  .paupiette-container {
+    max-width: 1070px;
+    padding: 0px 15px;
+    margin: 0 auto;
+  }
+
+  header {
+      height: 50px;
+      width: 100% !important;
+      background-color: white;
+      position: fixed;
+      font-size: 0px;
+  }
+
+  .menu-header .menu-logo img {
+      width: 100px;
+      transition: all .2s ease;
+  }
+
+  .menu-logo {
+      position: fixed;
+      z-index: 2000;
+      transform: translateX(-50%);
+      margin-left: 50vw;
+      padding: 5px;
+      width: 300px;
+      transition: all .4s ease;
+      text-align: center;
+  }
+
+  .paupiette-container {
+    max-width: 1070px;
+    padding: 0px 15px;
+    margin: 0 auto;
+  }
+
+  header .paupiette-container ul {
+    display: inline-block;
+    list-style: none;
+  }
+
+  header .paupiette-container ul li {
+      display: inline-block;
+      padding: 15px 10px 15px 10px;
+      line-height: 20px;
+      font-size: 17px;
+      transition: all .2s ease;
+  }
+
+  .paupiette-container ul li.btn-paupiette {
+      padding: 8px 10px 8px 10px;
+      margin: 7px;
+      color: white;
+      background-color: #5B1633;
+      transition: all .2s ease;
+  }
+
+  .paupiette-container ul li.btn-paupiette:hover {
+      background-color: #460b24;
+  }
+
+  .menu-li:hover {
+      background-color: rgba(91, 23, 51, 0.05);
+  }
+
+  .menu-li a {
+      color: rgba(0, 0, 0, 0.6);
+  }
+
+  .menu-li a:hover {
+      color: rgba(91, 23, 51, 0.9);
+  }
+
+  .onglet-left {
+    float:left;
+  }
+
+  .onglet-right {
+    float:right;
+  }
+
+  .scrolldown .menu-logo {
+      transition: all .4s ease;
+  }
+
+  header.scrolldown .menu-logo img {
+      transition: all .4s ease;
+      width: 60px;
+  }
+
+  /**********
+  MENU BURGER
+  **********/
+  .menu-burger {
+      width: 41px;
+      height: 36px;
+      display: inline-block;
+      float: right;
+      margin: 7px 0px;
+      cursor: pointer;
+      margin-right: 10px;
+      z-index: 3000;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      display: none;
+  }
+
+  .announce_title {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: -20px;
+    width: 300px;
+    background-color: #f0f0f0;
+    height: 50px;
+    color: #5a5a5a;
+    font-size: 24px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.background_announces h2 {
+    color: black;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+  .icon-bars {
+      padding: 22% 22% 0% 22%;
+  }
+
+  .icon-bar {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #5b1633;
+      border-radius: 1px;
+      margin-bottom: 6px;
+  }
+
+
+  li.menu-li.deroul.closed {
+     float: right;
+  }
+
+  ul.deroul-menu.closed {
+     display: none;
+  }
+
+   li.menu-li.deroul.open {
+      float: right;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  ul.deroul-menu.open {
+    display: block;
+    position: relative;
+    right: 0px;
+    top: 50px;
+    background-color: white;
+    width: 167px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+  header .paupiette-container ul.deroul-menu li a {
+    display: block;
+    padding: 15px 15px 15px 16px;
+    line-height: 20px;
+    font-size: 17px;
+    transition: all .2s ease;
+}
+
+header .paupiette-container ul.deroul-menu li {
+    display: block;
+    padding: 0px;
+    line-height: 0px;
+    font-size: 17px;
+    transition: all .2s ease;
+}
+
+header .paupiette-container ul.deroul-menu li:last-child {
+   border-top: 1px solid rgba(128, 128, 128, 0.19);
+}
+  // GENERAL
+
+
+  font-family: $font1;
+  font-size:17px;
+
+  .small-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.content {
+    padding-top: 50px;
+}
+
+  .glyphicon {
+    margin: 0px 10px;
+}
+
+  ul, ol {
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+  }
+
+  a {
+    color: $greyback;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $black;
+    text-decoration: none;
+  }
+
+  .btn-paupiette {
+    background-color: #5B1633;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+}
+
+.btn-paupiette:hover {
+  background-color: $couleur1hover;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-paupiette-home {
+  padding: 15px 30px;
+  font-size: 1.4em;
+  margin: 0px 5px;
+  font-weight: lighter;
+}
+
+
+.logo-header {
+    position: fixed;
+    z-index: 2000;
+    transform: translateX(-50%);
+    margin-left: 50vw;
+    padding: 5px;
+    width: 300px;
+    transition: all .4s ease;
+    text-align: center;
+}
+
+.scrolldown .logo-header {
+    /* width: 60px; */
+    margin-top: -20px;
+    transition: all .4s ease;
+}
+
+header img {
+    transition: all .4s ease;
+}
+
+header.scrolldown img {
+    transition: all .4s ease;
+    width: 60px;
+}  // BODY HOME
+
+.header-home {
+    background:url( asset-path('image_repas.png')) ;
+    background-color: white;
+    background-position: 70% center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.14);
+    color: white;
+    text-align: center;
+}
+
+.inner-container-left {
+    width: 50%;
+    padding: 80px 0px;
+}
+
+.baseline {
+    font-size: 2.5em ;
+    font-weight: lighter;
+    max-width: 500px ;
+    width: 100% ;
+    margin: 0 auto;
+    color: black;
+}
+
+.baseline-firstline {
+    text-align: left;
+    display: block;
+}
+
+.baseline-secondline {
+    text-align: right;
+}
+
+.baseline-secondline strong {
+    font-family: "playlistscript";
+    font-size: 1.6em;
+}
+
+.header-home strong {
+    display: inline-block;
+}
+
+.baseline h2 {
+    font-size: 0.5em;
+    font-weight: 100;
+}
+
+a.action-btn-home {
+    padding: 8px 10px 8px 10px;
+    margin: 7px;
+    color: white;
+    background-color: #5B1633;
+    transition: all .2s ease;
+    display: inline-block;
+    font-size: 0.4em;
+}
+
+section.selfies-du-midi {
+    padding-bottom: 30px;
+    background-color: rgba(127, 193, 159, 0.01);
+}
+
+.selfies-du-midi h2 {
+    text-align: center;
+    font-family: "playlistscript";
+    font-size: 2em;
+    margin: 0px;
+    padding: 30px 0px 15px 0px;
+}
+
+.selfies {
+    margin-bottom: 15px;
+    font-size: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.selfie-container {
+    width: 25%;
+    padding: 5px;
+}
+
+.selfie {
+    padding: 5% 5% 3% 5%;
+    background-color: orange;
+    background: url( asset-path('pola-vide.png')) ;
+    background-position: center;
+    background-size: cover;
+}
+
+.selfie-image {
+    width: 100%;
+    padding-bottom: 115%;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+}
+
+.selfie h3 {
+    font-size: 25px;
+    text-align: center;
+    font-family: "playlistscript";
+    margin: 6px 0px;
+}
+
+.prix table{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+td.table-prix {
+    font-size: 50px;
+    font-family: "playlistscript";
+    width: 30%;
+    text-align: center;
+}
+
+td.table-plat {
+    font-size: 25px;
+}
+
+  //BODY ANNONCES EN PLACE
+  .background_announces {
+      color: white;
+      height: 500px;
+      text-align: center;
+  }
+
+  .center_signup_bloc{
+  background-color: rgba(240, 240, 240, 0.9);
+  width: 100%;
+  height: 300px;
+  margin-top: 60px;
+
+  .actions{
+    text-align: center;
+    input{
+      text-align: center;
+      background-color: #4F112D;
+      border: 1px solid #4F112D;
+      width: 100px;
+      margin: 0 auto;
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      -webkit-transition: all O.3 ease-in-out;
+        -moz-transition: all O.3 ease-in-out;
+         -ms-transition: all O.3 ease-in-out;
+          -o-transition: all O.3 ease-in-out;
+             transition: all O.3 ease-in-out;
+    }
+    input:hover{
+      opacity:0.8;
+    }
+  }
+}
+
+  .sign_up_bloc{
+  width:100%;
+  height:240px;
+  //  background-color:blue;
+
+  select{
+    border: 1px solid #B2B5B6;
+    font-size: 14px;
+    background-color: rgba(240,240,240, 0.9);
+    color:grey;
+  }
+
+  p {
+  margin: 0 0 10px;
+  }
+
+  label{
+    color:#833974;
+    font-size:14px;
+    text-align:left;
+    padding: 5px 0px 5px 0px;
+  }
+}
+
+
+  //HEADER
+
+  nav.navbar.navbar-default.navbar-fixed-top {
+    height: 50px;
+}
+
+.navbar-brand {
+    padding: 2px 15px;
+}
+.baseline {
+    font-size: 2.5em;
+    font-weight: lighter;
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.baseline-firstline {
+    text-align: left;
+    display: block;
+}
+
+.baseline-secondline {
+    text-align: right;
+}
+
+.baseline-secondline strong {
+    font-family: $font2;
+    font-size: 1.6em;
+}
+
+.medium-container {
+    max-width: 530px;
+}
+
+  //FOOTER
+  .navbar-default {
+    background-color: white;
+    border-color: white;
+}
+
+  footer {
+    background-color: #f7f7f7;
+    padding: 15px;
+
+    .inner-footer {
+      margin: 0 auto;
+      display: flex;
+      font-weight: $light;
+      padding-bottom: 30px;
+
+      .footer-box {
+        width: 33%;
+
+        .box-footer-title {
+          display: block;
+          font-weight: $bold;
+          text-transform: uppercase;
+          font-size: 0.8em;
+          letter-spacing: 0.04em;
+          margin: 10px auto 5px auto;
+          color: $couleur1;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 0.8em;
+      display: inline-block;
+    }
+
+    .follow-footer {
+      display: inline-block;
+      color: $couleur1;
+      text-transform: uppercase;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .logo-copyright-footer {
+      display: inline-block;
+      float: right;
+      color:$greyback;
+
+      h2 {
+        font-family:$font2;
+        font-size: 1.5em;
+        display: inline-block;
+        font-weight: lighter;
+      }
+    }
+
+    .end-footer {
+      display: block;
+      padding-top: 15px;
+      border-top: 1px solid $greyback;
+
+      .social-logo svg {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+}
+.social-logo {
+    display: inline-block;
+}
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  body .pilier-container {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 770px) {
+  .baseline {
+    font-size: 2em !important;
+}
+
+.menu-logo {
+    transition: all .4s ease !important;
+}
+
+.menu-header .menu-logo img {
+    transition: all .4s ease !important;
+    width: 60px !important;
+}
+
+}
+
+@media screen and (max-width: 670px) {
+
+.menu-header .paupiette-container {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    padding-top: 70px;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: all .3s ease;
+}
+
+.menu-burger {
+  display: block !important;
+}
+
+li.menu-li.deroul.closed {
+    float: right;
+    display: none !important;
+}
+
+.menu-burger-open .menu-header .paupiette-container {
+  transform: translateY(0);
+}
+
+header .paupiette-container ul {
+    display: block!important;
+    float: none!important;
+}
+
+header .paupiette-container ul li {
+    display: block!important;
+}
+
+body .inner-container-left {
+    width: 100% !important;
+        padding: 50px 0px !important;
+    max-width: 500px !important;
+    margin: 0 auto;
+}
+
+.selfie-container {
+    width: 50% !important;
+    padding: 5px;
+}
+}
+
+@media screen and (max-width: 420px) {
+  .baseline {
+      font-size: 2em!important;
+  }
+
+  .baseline h2 {
+    font-size: 0.5em;
+    font-weight: 100;
+}
+
+a.action-btn-home {
+    padding: 8px 10px 8px 10px;
+    margin: 7px;
+    color: white;
+    background-color: #5B1633;
+    transition: all .2s ease;
+    display: inline-block;
+    font-size: 0.55em;
+}
+
+.selfies-du-midi h2 {
+    text-align: center;
+    font-family: "playlistscript";
+    font-size: 2em;
+    padding: 0px 80px;
+}
+
+.selfie-container {
+    width: 100% !important;
+    padding: 5px;
+}
+}
+
+@media screen and (max-width: 374px) {
+  .selfies-du-midi h2 {
+      text-align: center;
+      font-family: "playlistscript";
+      font-size: 2em;
+      padding: 0px 40px;
+  }
+
+  .baseline {
+      font-size: 2em!important;
+  }
+}
